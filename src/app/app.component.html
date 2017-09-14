@@ -1,3 +1,6 @@
 <h1>
   {{title}}
 </h1>
+<input (ngModel)="time" placeholder="seconds" />
+<button (click)="startTimer()">Start Timer!</button>
+<h2>{{timer}}</h2>
