@@ -8,13 +8,15 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'Set Timeout';
   time = 0;
+  count = 0;
 
   startTimer(value){
     while(this.time < value){
-      setTimeout(
-        this.time++,
-        1000
-      )
+      setTimeout(_ => {
+        this.count++},
+        this.time * 1000
+      );
+      this.time++;
     };
   };
 
