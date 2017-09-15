@@ -1,6 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<input (ngModel)="time" placeholder="seconds" />
-<button (click)="startTimer()">Start Timer!</button>
-<h2>{{timer}}</h2>
+<input #box (keyup.enter)="startTimer(box.value)" placeholder="seconds" />
+<button (click)="startTimer(box.value)">Start Timer!</button>
+<h2>{{time}}</h2>
